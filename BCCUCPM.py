@@ -12,7 +12,7 @@ import salome
 salome.salome_init()
 import salome_notebook
 notebook = salome_notebook.NoteBook()
-sys.path.insert(0, r'/home/Sina/Desktop/WorkDir/FinalData')    #Must be changed based on current working dir (also in line 317)
+sys.path.insert(0, r'/home/Sina/Desktop/WorkDir/FinalData')    # The path must be changed based on current working dir (also in line 317)
 
 ###
 ### GEOM component
@@ -314,7 +314,7 @@ isDone = Mesh_1.Compute()
 [ mat_2, inc_2, edges_1, Group_1_1, Group_2_1, Group_3_1, Group_4_1, Group_5_1, Group_6_1, Group_7_1, Group_8_1, Group_9_1, Group_10_1, Group_11_1, Group_12_1, Group_13_1, Group_14_1, Group_15_1, Group_16_1, Group_17_1, Group_18_1, Group_19_1, Group_20_1, Group_21_1, Group_22_1, Group_23_1, Group_24_1, Group_25_1, Group_26_1, Group_27_1, Group_28_1, Group_29_1, Group_30_1, BCCshell_1 ] = Mesh_1.GetGroups()
 smesh.SetName(Mesh_1, 'Mesh_1')
 try:
-  Mesh_1.ExportMED( r'/home/Sina/Desktop/WorkDir/FinalData/'+name+'.med', 0, 41, 1, Mesh_1, 1, [], '',-1, 1 ) #Must be changed based on current working dir (like line 15)
+  Mesh_1.ExportMED( r'/home/Sina/Desktop/WorkDir/FinalData/'+name+'.med', 0, 41, 1, Mesh_1, 1, [], '',-1, 1 ) #The path must be changed based on current working dir (like line 15)
   pass
 except:
   print('ExportPartToMED() failed. Invalid file name?')
